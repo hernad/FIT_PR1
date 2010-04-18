@@ -1,0 +1,12 @@
+zadatak glasi:
+
+napraviti program koji korisniku omogućava da unese neki broj.
+
+Nakon unosa, program treba da, koristeći rekurzivnu funkciju izračuna i ispiše
+sumu svih parnih brojeva kojie se nalaze između unesenog i broja 100.
+Prilikom izrade voditi računa da korisnik može unijeti broj veći ili manji od broja 100.
+
+
+ja sam u svojoj verziji uračunao i broj 100. Oni su ustvari tražili 
+između unesenog i broja 100 NE UKLJUČUJUĆI NJEGA (broj 100).
+

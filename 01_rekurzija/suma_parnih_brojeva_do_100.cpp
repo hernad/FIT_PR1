@@ -4,7 +4,7 @@ using namespace std;
 
 int sumaParnih_do_100(int num) {
 
-  int rez, plus_minus = 1;
+  int plus_minus = 1;
 
   if (num == 100) return 100;
 
@@ -14,10 +14,10 @@ int sumaParnih_do_100(int num) {
 
   if ( (num % 2) == 0) {
           cout << "--- debug dodajem: " << num << endl;
-          rez = sumaParnih_do_100(num + plus_minus * 2 ) + num ;
+          return sumaParnih_do_100(num + plus_minus * 2 ) + num ;
   } else { 
           // neparan npr. 99
-	  rez = sumaParnih_do_100(num + plus_minus); 
+	  return sumaParnih_do_100(num + plus_minus); 
   }
      
 }
@@ -26,7 +26,7 @@ int main() {
    
  int sabrati;
 
- cout << "ver 0.02 refactored" << endl << endl;
+ cout << "ver 0.03 refactored" << endl << endl;
 
  cout << "unesi broj za sabiranje: ";
  cin >> sabrati;

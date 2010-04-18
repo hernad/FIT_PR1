@@ -18,4 +18,20 @@ unesi broj za sabiranje: 91
 --- debug dodajem: 98
 suma svih parnih brojeva izmedju 91 i 100 je 480
 
+-------------------------------------------------------------
+
+bringout@nvostro-hernad:~/FIT/PR1/git/01_rekurzija$ ./a.out
+ver 0.02 refactored
+
+unesi broj za sabiranje: 89
+--- debug dodajem: 90
+--- debug dodajem: 92
+--- debug dodajem: 94
+--- debug dodajem: 96
+--- debug dodajem: 98
+suma svih parnih brojeva izmedju 89 i 100 je 570
+
+bringout@nvostro-hernad:~/FIT/PR1/git/01_rekurzija$ irb
+irb(main):001:0> 90+92+94+96+98
+=> 470
 

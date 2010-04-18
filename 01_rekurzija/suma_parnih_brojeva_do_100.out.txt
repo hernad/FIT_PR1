@@ -1,0 +1,21 @@
+----------------------- xxxxxxxxxxx ---------------------------
+ver 0.01
+
+unesi broj za sabiranje: 108
+--- debug dodajem: 108
+--- debug dodajem: 106
+--- debug dodajem: 104
+--- debug dodajem: 102
+suma svih parnih brojeva izmedju 108 i 100 je 520
+----------------------- xxxxxxxxxxx ---------------------------
+
+ver 0.01
+
+unesi broj za sabiranje: 91
+--- debug dodajem: 92
+--- debug dodajem: 94
+--- debug dodajem: 96
+--- debug dodajem: 98
+suma svih parnih brojeva izmedju 91 i 100 je 480
+
+

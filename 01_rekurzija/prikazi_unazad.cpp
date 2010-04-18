@@ -5,7 +5,7 @@ void prikaziUnazad() {
 
   char znak;
 
-  cin >> znak;
+  cin.get(znak);
 
   if (znak != '.') {
      prikaziUnazad();

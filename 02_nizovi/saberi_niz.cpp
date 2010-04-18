@@ -1,6 +1,5 @@
 #include <iostream>
 
-using namespace std;
 
 
 void unos (int n[], int v)

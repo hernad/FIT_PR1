@@ -1,0 +1,16 @@
+----------------------- xxxxxxxxxxx ---------------------------
+100
+500
+ako pokusamo: *p1 = 4
+ptr_2.cpp:18: error: assignment of read-only location ‘* p1’
+sa gcc ovo ne radi: int* const p2;
+dobijam error: ptr_2.cpp:22: error: uninitialized const ‘p2’
+ako pokusamo: p2 = &i1
+ptr_2.cpp:24: error: assignment of read-only variable ‘p2’
+int n[5] = {10, 20, 30, 40, 50}
+p4-p3 = 2
+p4= 0x7fff89b7fb58 p3= 0x7fff89b7fb50
+p4b-p3b = 8
+pb= 0x7fff89b7fb58 p3b= 0x7fff89b7fb50
+*p4 bi trebao pokazati treci element array-a:30
+

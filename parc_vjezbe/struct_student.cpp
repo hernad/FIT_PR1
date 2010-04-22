@@ -38,21 +38,36 @@ return 0;
 void Unos(Student *s, int max) {
 
    for(int i=0; i<max; i++) {
+
           cout << "Podaci o studentu " << i+1 << " "
                << endl;
-          cout << "Ime i prezime: " ;
+          cout << "------------------------------------\n";
+
+
+          cout << "Ime i prezime: ";
           cin.getline( (s[i]).imePrezime, 30);
 
-          cout << "index: " ;
+
+          cout << "index:" ;
           cin.getline( (s[i]).index, 10);
 
-          cout << "godina studija: ";
+
+          cout << "godina studija:";
           cin >> (s[i].godinaStudija);
+
+          char  ch[1];
+          // cout << "pritisni nesto za nastavak";
+          cin.getline(ch, 1);
+
+          cout << endl;
+
    }
 
 }
 
 Student *getPokazivac(Student *studenti, int max) {
+
+	cout << "------------ get pokazivac --------------------" << endl;
 
     for(int i=0; i<max; i++)
           cout << i+1 << ". " << (studenti[i]).imePrezime << endl;
@@ -70,6 +85,8 @@ Student *getPokazivac(Student *studenti, int max) {
 }
 
 void Pretraga(Student *s, int max) {
+
+   cout << "-------------- pretraga -----------------" << endl;
 
    char br_ind[10];
 
@@ -95,6 +112,8 @@ void Pretraga(Student *s, int max) {
 
 
 void PrintPodatke(Student *s) {
+
+cout << endl << "........ podaci o studentu: .........." << endl;
 
 cout << "ime :" << s->imePrezime
      << endl

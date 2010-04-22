@@ -5,13 +5,13 @@ using namespace std;
 
 int unesi_niz(int *a);
 
-/* 
+/*
  f-ja suma_10 sumira parne elemente zadanog niza rekurzivno
-  
+
  */
 
 // tip SumaFType je pointer na funkciju sumiraj
-typedef int (SumaFType) (int a*, int n);
+typedef int (* SumaFType) (int *a, int n);
 
 // length a = n, a - array
 int suma_10(int *a, int n);
@@ -24,12 +24,12 @@ int main() {
 		// dok ne dobijemo matricu vrti se
 		n = unesi_niz(a);
 	}
-	
+
 	cout << "trazena suma je "
 		 << suma_10(a, n);
-	
+
 	return 0;
-	
+
 }
 
 
@@ -37,17 +37,17 @@ int unesi_niz(int *a) {
 	int n=0;
 	cout << "unesi broj elemenata ";
 	cin >> n;
-	
+
 	if (n<1)
 		return -1;
 	else
 		a == new int[n];
-	
+
 	for (int i=0; i<n; i++) {
-		cout << "unesi element " < i+1;
+		cout << "unesi element " << i+1;
 		cin >> a[i];
 	}
-	
+
 	cout << "niz popunjen \n";
 	return n;
 }
@@ -55,7 +55,7 @@ int unesi_niz(int *a) {
 int suma_10(int *a, int n) {
 	SumaFType pf = suma_10;
 	// pointer na funkciju
-	
+
 	//bazni slucaj
 	if (n==1) {
 		int tmp = a[n-1];
@@ -65,17 +65,17 @@ int suma_10(int *a, int n) {
 			return tmp;
 	} else
 		return 0;
-	
+
 	int tmp = a[n-1];
-	bool valid = ((tmp>10) && 
+	bool valid = ((tmp>10) &&
 			      ((tmp%2)==0));
-	
-	if (!valid) 
+
+	if (!valid)
 		// ne zadovoljava uslove
 		tmp = 0;
-	
+
 	return (*pf) (a, n-1) + tmp;
-			
+
 
 }
 // end function suma_10

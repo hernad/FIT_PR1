@@ -1,0 +1,13 @@
+unesi broj elemenata :3
+ispis 1
+arr [0] = 3
+arr [1] = 3
+arr [2] = 3
+brisem matricu
+ispis 2 - elementi su dealocirani ali program i dalje ispisuje ... 
+arr [0] = 0
+arr [1] = 0
+arr [2] = 3
+ispis 3 ... nakon NULL imamo segfault
+/home/bringout/FIT/UPR/git/bin/comp: line 37:  9101 Segmentation fault      ./a.out
+

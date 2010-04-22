@@ -40,11 +40,13 @@ int unesi_niz(int *a) {
 
 	if (n<1)
 		return -1;
-	else
-		a == new int[n];
+	else {
+		cout  << "kreiram niz od " << n << " elemenata\n";
+		a = new int[n];
+	}
 
 	for (int i=0; i<n; i++) {
-		cout << "unesi element " << i+1;
+		cout << "unesi element " << i+1 << ": ";
 		cin >> a[i];
 	}
 

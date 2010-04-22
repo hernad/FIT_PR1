@@ -45,12 +45,11 @@ int main() {
 
 void Unos(A2T *pa, int n) {
 
-	A2T a = *pa;
 
-	a = new int *[n];
+	(*pa) = new int *[n];
 
 	for (int i=0; i<n; i++)
-		a[i] = new int[n];
+		(*pa)[i] = new int[n];
 
 	cout << "unesi elemente \n";
 
@@ -59,7 +58,7 @@ void Unos(A2T *pa, int n) {
 			cout << "unesi elemenat a[" << i+1
 				 << "][" << j+1
 				 << "] ";
-			cin >> a[i][j];
+			cin >> (*pa)[i][j];
 		}
 }
 

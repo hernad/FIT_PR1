@@ -1,0 +1,9 @@
+----------------------- xxxxxxxxxxx ---------------------------
+dyn assert
+0x2014010
+a.out: dyn_hello.cpp:20: int main(): Assertion `pint2 != 0' failed.
+/home/bringout/FIT/UPR/git/bin/comp: line 37: 16564 
+Aborted ./a.out
+
+----------------------- xxxxxxxxxxx ---------------------------
+

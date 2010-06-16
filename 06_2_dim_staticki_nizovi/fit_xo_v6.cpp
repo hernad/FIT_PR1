@@ -1,6 +1,10 @@
 #include <iostream>
 #include <iomanip>
 
+#include <stdlib.h>
+
+using namespace std;
+
 // 
 // zadatak prepisan iz vjezbi FIT mostar
 // minorne promjene: sopstvene konvencije imenovanja varijabli
@@ -9,18 +13,18 @@
 //
 
 const int RED = 3;
-const int KOLONA = 4;
+const int KOLONA = 3;
 
 
-void ispis(char xo[][KOLONA] {
+void ispis(char xo[][KOLONA]) {
 
       cout << endl << "FIT-XO v0.1" << endl;
 
-      for (int i=0<; i<RED; i++) {
+      for (int i=0; i<RED; i++) {
         for(int j=0; j<KOLONA; j++)
             cout << "+---";
         cout << "+" << endl;
-        for(int j=0; j<KOLONA< j++)
+        for(int j=0; j<KOLONA; j++)
             cout  << "|" << setw(3) << xo[i][j];
        cout << "|" << endl;
      }
@@ -30,9 +34,10 @@ void ispis(char xo[][KOLONA] {
 
      cout << "+" << endl;
 
+     return;
 }
 
-void unos(char xo[][RED]; int &igrac, char imePrvogIgraca[], char imeDrugogIgraca[] {
+void unos(char xo[][RED], int &igrac, char imePrvogIgraca[], char imeDrugogIgraca[]) {
     int x,y;
 
     if (igrac % 2 == 0)
@@ -40,14 +45,15 @@ void unos(char xo[][RED]; int &igrac, char imePrvogIgraca[], char imeDrugogIgrac
     else
         cout << imeDrugogIgraca;
 
-    cout << ", (x,y) = ";
+    cout << ", unesi koordinatu x pa y, koordinate odvoji sa ENTER:" << endl;
+
 
     cin >> x >> y;
 
     x--; y--;
 
     if (x>=0 && x<RED && y>=0 & y<KOLONA) {
-        if (xo[x][y] == ' ' {
+        if (xo[x][y] == ' ') {
             if (igrac % 2 == 0)
                 xo[x][y] = 'X';
             else
@@ -64,7 +70,7 @@ bool provjeri_redove(char xo[][KOLONA]) {
    char znak = ' ';
    int brojac = 0;
 
-   for(int i=0; i<red; i++) {
+   for(int i=0; i<RED; i++) {
       for(int j=0; j<KOLONA; j++) {
          if(j==0)
                 znak=xo[i][j];
@@ -82,6 +88,30 @@ bool provjeri_redove(char xo[][KOLONA]) {
 
    return false;
 }
+
+bool provjeri_kolone(char xo[][KOLONA]) {
+   char znak = ' ';
+   int brojac = 0;
+
+   for(int i=0; i<RED; i++) {
+      for(int j=0; j<KOLONA; j++) {
+         if(j==0)
+                znak=xo[j][i];
+         else {
+             if( znak != ' ' && znak==xo[j][i] )
+                 brojac++;
+         }
+     }
+
+     if (brojac==2)
+        return true;
+     else
+        brojac=0;
+   }
+
+   return false;
+}
+
 
 bool provjeri_dijagonalno_dl_ld(char xo[][KOLONA], bool is_dl) {
     
@@ -114,19 +144,19 @@ bool provjeri_dijagonalno_dl_ld(char xo[][KOLONA], bool is_dl) {
     return false;
 }
 
-bool projvera(char xo[][KOLONA]) {
+bool provjera(char xo[][KOLONA]) {
     
-    if(provjeri_redove(xo) || provjeri_kolone(xo) || provjeri_dijagonalno_dl_ld(xo, true) || provjerio_dijagonalno_dl_ld(xo, false)
+    if(provjeri_redove(xo) || provjeri_kolone(xo) || provjeri_dijagonalno_dl_ld(xo, true) || provjeri_dijagonalno_dl_ld(xo, false))
             return true;
 
     return false;
 }
 
-void postavi_na_defaultne_vrijednost(char xo[][KOLONA] ) {
+void postavi_na_defaultne_vrijednosti(char xo[][KOLONA] ) {
 
     for(int i=0; i<RED; i++)
         for(int j=0; j<KOLONA; j++)
-            xo[RED, KOLONA] = ' ';
+            xo[i][j]=' ';
        
     return;
 
@@ -146,7 +176,7 @@ int main() {
     cin.getline(imePrvogIgraca, 30);
 
     cout << "Unesite ime drugog igraca: ";
-    cin.getline(imeDrugogIgraca, 30;
+    cin.getline(imeDrugogIgraca, 30);
 
     system("clear");
 
@@ -159,7 +189,7 @@ int main() {
 
     ispis(xo);
 
-    if((igrac-1= % 2==0)
+    if((igrac-1) % 2 == 0)
         cout << imePrvogIgraca;
     else
         cout << imeDrugogIgraca;

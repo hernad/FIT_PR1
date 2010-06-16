@@ -1,24 +1,17 @@
------------------------ xxxxxxxxxxx ---------------------------
-unesi broj elemenata :3
-unos
-arr [0][0] = 1
-arr [0][1] = 2
-arr [0][2] = 3
-arr [1][0] = 4
-arr [1][1] = 5
-arr [1][2] = 6
-arr [2][0] = 7
-arr [2][1] = 8
-arr [2][2] = 9
-ispis 1
-arr [0][0] = 1
-arr [0][1] = 2
-arr [0][2] = 3
-arr [1][0] = 4
-arr [1][1] = 5
-arr [1][2] = 6
-arr [2][0] = 7
-arr [2][1] = 8
-arr [2][2] = 9
-kraj
+PR1 - dyn 2-dim array alokacija i dealokacija u posebnim funkcijama
+ovaj primjer je karakteristican zato sto se unutar ove funkcije desava alociranje memorije
+zato je potrebno da funkcija ima prima !pointer! na matricu kao argument
+unutar init_a setujem dinamicku matricu
+0x1a5c010
+print unutar init_a
+zagrade oko pointer varijable ovom izrazu su obavezne  (*pa)[i]  !!!
+0 1 2 3 4 5 6 7 8 9 
+pa =0x1a5c010
+0 1 2 3 4 5 6 7 8 9 
+matrica dealocirana
+hoces li segfault da vidis ? Ukucaj onda 1, ako neces ukucaj 0:
+1
+pa =0
+/home/bringout/FIT/UPR/git/bin/comp: line 37: 23155 Segmentation fault      ./a.out
+
 

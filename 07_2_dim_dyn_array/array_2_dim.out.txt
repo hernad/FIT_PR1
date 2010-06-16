@@ -1,0 +1,39 @@
+PR1 - dyn 2-dim array alokacija i dealokacija u posebnim funkcijama
+ovaj primjer je karakteristican zato sto se unutar ove funkcije desava alociranje memorije
+zato je potrebno da funkcija ima prima !pointer! na matricu kao argument
+unutar init_a setujem dinamicku matricu n x n
+0xf22010
+print unutar init_a
+zagrade oko pointer varijable ovom izrazu su obavezne  (*pppa)[i][j]  !!!
+0 0 0 0 0 0 0 0 0 0 
+0 1 2 3 4 5 6 7 8 9 
+0 2 4 6 8 10 12 14 16 18 
+0 3 6 9 12 15 18 21 24 27 
+0 4 8 12 16 20 24 28 32 36 
+0 5 10 15 20 25 30 35 40 45 
+0 6 12 18 24 30 36 42 48 54 
+0 7 14 21 28 35 42 49 56 63 
+0 8 16 24 32 40 48 56 64 72 
+0 9 18 27 36 45 54 63 72 81 
+
+ppa =0xf22010
+0 0 0 0 0 0 0 0 0 0 
+0 1 2 3 4 5 6 7 8 9 
+0 2 4 6 8 10 12 14 16 18 
+0 3 6 9 12 15 18 21 24 27 
+0 4 8 12 16 20 24 28 32 36 
+0 5 10 15 20 25 30 35 40 45 
+0 6 12 18 24 30 36 42 48 54 
+0 7 14 21 28 35 42 49 56 63 
+0 8 16 24 32 40 48 56 64 72 
+0 9 18 27 36 45 54 63 72 81 
+
+matrica dealocirana
+hoces li segfault da vidis ? Ukucaj onda 1, ako neces ukucaj 0:
+
+1
+ppa =0
+/home/bringout/FIT/UPR/git/bin/comp: line 37:  7180 Segmentation fault      ./a.out
+
+----------------------- xxxxxxxxxxx ---------------------------
+

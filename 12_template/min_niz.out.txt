@@ -1,0 +1,18 @@
+----------------------- xxxxxxxxxxx ---------------------------
+niz:
+20 18 16 14 12 10 8 6 4 2 
+
+najmanji = 20
+najmanji za sada = 18
+najmanji za sada = 16
+najmanji za sada = 14
+najmanji za sada = 12
+najmanji za sada = 10
+najmanji za sada = 8
+najmanji za sada = 6
+najmanji za sada = 4
+najmanji za sada = 2
+najmanji elemenat niza je :2
+
+----------------------- xxxxxxxxxxx ---------------------------
+

@@ -33,8 +33,14 @@ int main()
    cout << "kubika " << vozila[9].kubika << endl;
 
 
-   cout << "naziv [10]= " << vozila[10].naziv << endl;
-   cout << "kubika " << vozila[10].kubika << endl;
+
+   cout << "releasing vozila struct" << endl; 
+   delete [] vozila;
+   vozila = NULL;
+
+   cout << "naziv [5]= " << vozila[5].naziv << endl;
+   cout << "kubika " << vozila[5].kubika << endl;
+
 
 
    return 0;

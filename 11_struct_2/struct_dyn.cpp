@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string.h>
+#include <fstream>
 
 using namespace std;
 
@@ -8,15 +9,31 @@ struct Vozilo {
     int kubika;
     char naziv[200];
     void ispisi();
+    void save(char *fname);
+   void load(char *fname);
 };
 
 void Vozilo::ispisi() {
 
-   cout << "naziv= " << naziv << endl;
-   cout << "kubika " << kubika << endl;
+   cout << "naziv= " << this->naziv << endl;
+   cout << "kubika " << this->kubika << endl;
 
 
 }
+
+void Vozilo::save(char *fname) {
+  std::ofstream fout(fname, ios::out | ios::binary);
+  fout.write( (char *) this,  sizeof(*this));
+
+}
+
+void Vozilo::load(char *fname) {
+
+    std::ifstream fin(fname, ios::in | ios::binary);
+
+    fin.read( (char *) this, sizeof(*this));
+}
+
 
 int main()
 {
@@ -38,6 +55,16 @@ int main()
    vozila[5].ispisi();
 
    cout << "clan 9:" << endl;
+   vozila[9].ispisi();
+
+
+   char *fname = (char *)"obj5.bin";
+
+   vozila[5].save(fname);
+
+   vozila[9].load(fname);
+
+   cout << "clan 9 nakon load:" << endl;
    vozila[9].ispisi();
 
 

@@ -7,8 +7,16 @@ struct Vozilo {
     int godina;
     int kubika;
     char naziv[200];
-
+    void ispisi();
 };
+
+void Vozilo::ispisi() {
+
+   cout << "naziv= " << naziv << endl;
+   cout << "kubika " << kubika << endl;
+
+
+}
 
 int main()
 {
@@ -25,13 +33,12 @@ int main()
    strcpy(vozila[5].naziv, nazivi[0]);
    vozila[5].kubika = 1000;
 
-   cout << "naziv [5]= " << vozila[5].naziv << endl;
-   cout << "kubika " << vozila[5].kubika << endl;
+   
+   cout << "clan 5:" << endl;
+   vozila[5].ispisi();
 
-
-   cout << "naziv [9]= " << vozila[9].naziv << endl;
-   cout << "kubika " << vozila[9].kubika << endl;
-
+   cout << "clan 9:" << endl;
+   vozila[9].ispisi();
 
 
    cout << "releasing vozila struct" << endl; 

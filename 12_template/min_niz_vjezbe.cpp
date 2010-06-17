@@ -2,6 +2,9 @@
 
 using namespace std;
 
+// ovako je u vjezbama napravljen template
+// mene je zbunio E& 
+// medjtim i moja i ova verzija rade isto
 
 template <class E> 
 E& a_min(E *niz, int velicina) {

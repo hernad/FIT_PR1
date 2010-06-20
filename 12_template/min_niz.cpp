@@ -4,7 +4,7 @@ using namespace std;
 
 
 template <class E> 
-E& a_min(E *niz, int velicina) {
+E a_min(E *niz, int velicina) {
 
   E *rez;
   

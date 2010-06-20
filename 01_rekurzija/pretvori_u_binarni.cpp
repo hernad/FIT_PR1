@@ -5,6 +5,8 @@ using namespace std;
 
 void PretvoriUBinarni(int broj) {
 
+  cout << "poziv PretvoriUBinarni " << broj << endl;
+
   if (broj <= 1) {
      cout << broj;
      return;

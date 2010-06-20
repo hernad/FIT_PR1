@@ -36,6 +36,7 @@ int main() {
 
                         switch(izbor) {
 				case 1:
+                                        cout << "idemo na search menu ... " << endl;
 					search_menu(a,10);
 					break;
 				case 2:

@@ -7,13 +7,15 @@ void sort_bubble(int a[],int N,char izbor) {
          
         int i;
 
-	for(i=0;i<N;i++)
+	for(i=0; i<N; i++)
 		A[i]=a[i];
 
 	//sortiranje polja
-	int usporedba=0; int premjestaj=0;
+	int usporedba=0; 
+        int premjestaj=0;
+
 	int IndikatorZamjene; int brojac=0;//brojac prolaza
-	do{
+	do {
 		IndikatorZamjene=1; brojac+=1;
 		for(i=0;i<N-1;i++){
 			if (A[i]>A[i+1]){
@@ -23,8 +25,9 @@ void sort_bubble(int a[],int N,char izbor) {
 			}//if
 			usporedba+=1;
 		}//for
+
 		N=N-1;
-	}while ((N>1)&&(IndikatorZamjene==0));
+	} while ((N>1) && (IndikatorZamjene==0));
 
 
        //ispis sortiranog polja

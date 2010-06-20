@@ -8,7 +8,7 @@ void sort_insertion(int a[], int N, char izbor) {
 
 	int n=N+1; int A[11];
 
-	for(i=1;i<n;i++)
+	for(i=1; i<n; i++)
 		A[i]=a[i-1];
 
 	//sortiranje polja
@@ -33,6 +33,7 @@ void sort_insertion(int a[], int N, char izbor) {
 			cout << setw(5) << A[i];
 		cout << endl;
 	} //if
+
 	cout << "Sortiranje umetanjem: " << "usporedbi(" << usporedba << ") "
 	     << "premjestanja (" << premjestaj << ")" << endl;
 

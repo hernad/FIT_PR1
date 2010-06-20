@@ -7,11 +7,12 @@ void sort_selection(int A[], int N) {
 
         int i;
 
-	for(i=0;i<N;i++)
+	for(i=0; i<N; i++)
 		a[i]=A[i];
 	//sortiranje
 
-	int usporedba=0; int premjestaj=0;
+	int usporedba=0; 
+        int premjestaj=0;
 	for(i=0;i<N-1;i++){
 		int lokacija=i;
 		for(int j=i+1;j<N;j++){

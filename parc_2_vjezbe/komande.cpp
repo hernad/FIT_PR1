@@ -100,17 +100,78 @@ void struct_1() {
 
 }
 
+void clear_cin() {
+
+   if (cin.fail()) {
+
+       // http://www.cs.utk.edu/cs102/lectures/cinLecture.html
+       // cout << "imamo gresku kod zadnjeg unosa !!!" << endl;
+       cin.clear();
+   
+        // cout << "praznim sta je ostalo u cin:" << endl;
+        //int i = 0;
+        while ( cin.get() != '\n') //{
+              //cout << ++i << endl;
+         // }
+             ;
+
+         cout << "buffer ociscen nakon fail-a" << endl;
+
+   } 
+}
+
+
 void getline_1() {
 
-char *temp = new char[10];
+char *temp = new char[10], *temp_2 = new char[100];
 
 cout << "unesite TACNO 10 znakova :";
 cin.getline(temp, 10);
+cout << "ukucano je :" << temp << endl;
+
+cout << "duzina stringa je " << strlen(temp) << endl;
+
+clear_cin();
+
+int i=0;
+
+cout << "unesite/2 TACNO 10 znakova :";
+cin.getline(temp_2, 10);
+
+clear_cin();
+
+cout << "ukucano je :" << temp_2 << endl;
+
+cout << "duzina stringa je " << strlen(temp_2) << endl;
+
+}
+
+void getline_1_otkida_1_znak() {
+
+char *temp = new char[10], *temp_2 = new char[10];
+
+cout << "unesite TACNO 10 znakova :";
+cin.ignore();
+cin.getline(temp, 10);
+//cin.ignore(100);
+
 
 cout << "ukucano je :" << temp << endl;
 
 cout << "duzina stringa je " << strlen(temp) << endl;
+
+
+cout << "unesite/2 TACNO 10 znakova :";
+cin.ignore();
+cin.getline(temp_2, 10);
+
+cout << "ukucano je :" << temp_2 << endl;
+
+cout << "duzina stringa je " << strlen(temp_2) << endl;
+
 }
+
+
 
 
 void get_2() {
@@ -180,7 +241,7 @@ void get_4() {
   cout << "unesi znak: "; 
   cin.get(unesi);
 
-  cin.ignore(100, '\n');
+  cin.ignore(100, '#');
 
   cout << "unos je bio:" << endl;
 
@@ -193,7 +254,8 @@ void get_4() {
 
 int main() {
 
-//getline_1();
+getline_1();
+//getline_1_otkida_1_znak();
 
 // for_next();
 
@@ -203,7 +265,7 @@ int main() {
  
 // get_3();
 
-get_4();
+// get_4();
 
 return 0;
 }

@@ -133,8 +133,6 @@ cout << "duzina stringa je " << strlen(temp) << endl;
 
 clear_cin();
 
-int i=0;
-
 cout << "unesite/2 TACNO 10 znakova :";
 cin.getline(temp_2, 10);
 

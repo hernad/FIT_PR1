@@ -112,13 +112,77 @@ cout << "ukucano je :" << temp << endl;
 cout << "duzina stringa je " << strlen(temp) << endl;
 }
 
+
+void get_2() {
+
+
+  char unesi[10];
+
+  cout << "unesi 9 znakova: "; 
+  cin.get(unesi, 10, '\n');
+
+  
+  cout << "unos je bio:" << endl;
+
+  cout << unesi;
+
+  cout << "----------------" << endl;
+
+}
+
+void get_3() {
+
+
+  char unesi[10], unesi_2[10], unesi_3[10];
+
+  cout << "unesi znak: "; 
+  cin.get(unesi, 5, '\n');
+
+  cin.ignore(100, '\n');
+
+  cout << "unesi znak 2: "; 
+  cin.get(unesi_2, 5, '\n');
+  cin.ignore(100, '\n');
+
+
+ 
+  cout << "unesi znak 3: "; 
+  cin.get(unesi_3, 5, '\n');
+
+
+
+  cout << "unos je bio:" << endl;
+
+  cout << unesi;
+
+  cout << "----------------" << endl;
+
+  cout << "unos 2 je bio:" << endl;
+
+  cout << unesi_2;
+
+  cout << "----------------" << endl;
+
+   cout << "unos 3 je bio:" << endl;
+
+  cout << unesi_3;
+
+  cout << "----------------" << endl;
+
+
+}
+
+
 int main() {
 
 //getline_1();
 
 // for_next();
 
-struct_1();
+// struct_1();
+
+// get_2();
+get_3();
 
 return 0;
 }

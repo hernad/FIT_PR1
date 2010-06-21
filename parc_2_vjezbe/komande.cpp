@@ -172,6 +172,24 @@ void get_3() {
 
 }
 
+void get_4() {
+
+
+  char unesi;
+
+  cout << "unesi znak: "; 
+  cin.get(unesi);
+
+  cin.ignore(100, '\n');
+
+  cout << "unos je bio:" << endl;
+
+  cout << unesi;
+
+  cout << "----------------" << endl;
+}
+
+
 
 int main() {
 
@@ -182,7 +200,10 @@ int main() {
 // struct_1();
 
 // get_2();
-get_3();
+ 
+// get_3();
+
+get_4();
 
 return 0;
 }
